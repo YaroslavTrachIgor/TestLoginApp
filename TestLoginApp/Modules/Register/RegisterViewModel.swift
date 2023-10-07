@@ -20,19 +20,23 @@ protocol RegisterViewModelProtocol {
 //MARK: - Main ViewModel
 final class RegisterViewModel {
     
+    private var authClient: LoginAuthClientProtocol? {
+        return LoginAuthClient()
+    }
+    
     @Published var isLoggedIn: Bool = false
     @Published var hasAnAccount: Bool = true
     @Published var goToPasswordReset: Bool = false
     @Published var errorMessage: String?
     
     func login(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+        authClient?.loginWith(email: email, password: password, completion: { [weak self] error in
             if let error = error {
                 self?.errorMessage = error.localizedDescription
             } else {
                 self?.isLoggedIn = true
             }
-        }
+        })
     }
     
     func backToSignUp() {

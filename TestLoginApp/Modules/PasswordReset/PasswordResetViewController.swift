@@ -62,17 +62,15 @@ final class PasswordResetViewController: UIViewController {
 
 //MARK: - Main methods
 private extension PasswordResetViewController {
-    func prepareUI() {
-        recoveryEmailTextField.setupBaseCredetianalsTextField(placeholder: "Email")
-    }
-    
     func presentLoginVC() {
         navigationController?.popViewController(animated: true)
     }
     
+    func prepareUI() {
+        recoveryEmailTextField.setupBaseCredetianalsTextField(placeholder: "Email")
+    }
+    
     func presentAlertVC(title: String, message: String?) {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel))
-        self.present(alertVC, animated: true)
+        AlertManager.presentBaseAlert(title: title, message: message, on: self)
     }
 }

@@ -15,6 +15,11 @@
 		CE1495222AC77DD300C53C79 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1495212AC77DD300C53C79 /* LoginViewModel.swift */; };
 		CE1495242AC77DEA00C53C79 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1495232AC77DEA00C53C79 /* RegisterViewModel.swift */; };
 		CE1495262AC77E1D00C53C79 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1495252AC77E1D00C53C79 /* PasswordResetViewModel.swift */; };
+		CEA75ADE2AD1F8A800F1F444 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA75ADD2AD1F8A800F1F444 /* AuthManager.swift */; };
+		CEA75AE12AD1FBCD00F1F444 /* LoginAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA75AE02AD1FBCD00F1F444 /* LoginAuthClient.swift */; };
+		CEA75AE32AD1FC5900F1F444 /* RegisterAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA75AE22AD1FC5900F1F444 /* RegisterAuthClient.swift */; };
+		CEA75AE52AD1FC9000F1F444 /* ResetPasswordAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA75AE42AD1FC9000F1F444 /* ResetPasswordAuthClient.swift */; };
+		CEA75AE72AD2076000F1F444 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA75AE62AD2076000F1F444 /* AlertManager.swift */; };
 		CEA94DA72AB921FE00E43D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA94DA62AB921FE00E43D31 /* AppDelegate.swift */; };
 		CEA94DA92AB921FE00E43D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA94DA82AB921FE00E43D31 /* SceneDelegate.swift */; };
 		CEA94DAE2AB921FE00E43D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA94DAC2AB921FE00E43D31 /* Main.storyboard */; };
@@ -56,6 +61,11 @@
 		CE1495212AC77DD300C53C79 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CE1495232AC77DEA00C53C79 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CE1495252AC77E1D00C53C79 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
+		CEA75ADD2AD1F8A800F1F444 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		CEA75AE02AD1FBCD00F1F444 /* LoginAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthClient.swift; sourceTree = "<group>"; };
+		CEA75AE22AD1FC5900F1F444 /* RegisterAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthClient.swift; sourceTree = "<group>"; };
+		CEA75AE42AD1FC9000F1F444 /* ResetPasswordAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordAuthClient.swift; sourceTree = "<group>"; };
+		CEA75AE62AD2076000F1F444 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		CEA94DA32AB921FE00E43D31 /* TestLoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA94DA62AB921FE00E43D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA94DA82AB921FE00E43D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +171,34 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		CEA75AD92AD1ECAC00F1F444 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				CEA75ADC2AD1F87200F1F444 /* Managers */,
+				CEA75ADF2AD1FBBE00F1F444 /* Services */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		CEA75ADC2AD1F87200F1F444 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA75ADD2AD1F8A800F1F444 /* AuthManager.swift */,
+				CEA75AE62AD2076000F1F444 /* AlertManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CEA75ADF2AD1FBBE00F1F444 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEA75AE02AD1FBCD00F1F444 /* LoginAuthClient.swift */,
+				CEA75AE22AD1FC5900F1F444 /* RegisterAuthClient.swift */,
+				CEA75AE42AD1FC9000F1F444 /* ResetPasswordAuthClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CEA94D9A2AB921FE00E43D31 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				CE14951B2AC77D5400C53C79 /* Common */,
+				CEA75AD92AD1ECAC00F1F444 /* Logic */,
 				CE1495192AC77D4500C53C79 /* Modules */,
 				CE14951A2AC77D4C00C53C79 /* Resources */,
 				CEA94DB42AB9220900E43D31 /* Info.plist */,
@@ -352,14 +391,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA94DDF2AB92A1800E43D31 /* LoginViewController.swift in Sources */,
+				CEA75AE52AD1FC9000F1F444 /* ResetPasswordAuthClient.swift in Sources */,
 				CE1495172AC76D3900C53C79 /* PasswordResetViewController.swift in Sources */,
+				CEA75AE12AD1FBCD00F1F444 /* LoginAuthClient.swift in Sources */,
 				CEA94DA72AB921FE00E43D31 /* AppDelegate.swift in Sources */,
 				CE1495242AC77DEA00C53C79 /* RegisterViewModel.swift in Sources */,
 				CE14951D2AC77D7900C53C79 /* UIExtensions.swift in Sources */,
 				CE1495262AC77E1D00C53C79 /* PasswordResetViewModel.swift in Sources */,
 				CEA94DA92AB921FE00E43D31 /* SceneDelegate.swift in Sources */,
 				CE1495132AC65FA900C53C79 /* RegisterViewController.swift in Sources */,
+				CEA75AE32AD1FC5900F1F444 /* RegisterAuthClient.swift in Sources */,
 				CE1495222AC77DD300C53C79 /* LoginViewModel.swift in Sources */,
+				CEA75AE72AD2076000F1F444 /* AlertManager.swift in Sources */,
+				CEA75ADE2AD1F8A800F1F444 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -100,8 +100,6 @@ private extension RegisterViewController {
     }
     
     func presentAlertVC(title: String, message: String?) {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel))
-        self.present(alertVC, animated: true)
+        AlertManager.presentBaseAlert(title: title, message: message, on: self)
     }
 }
